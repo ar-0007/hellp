@@ -26,7 +26,7 @@ const Home = () => {
           <p className="text-2xl font-bold md:text-5xl">
             I'm <span className="text-green-600">Farhan MaYo.</span>
           </p>
-          <p className="text-xl md:text-2xl lg:text-4xl w-full  text-center ">
+          <p className="text-xl md:text-2xl lg:text-4xl w-full  sm:text-center lg:text-start ">
             I am a{' '}
             <span>
               <Typewriter
