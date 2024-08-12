@@ -3,7 +3,7 @@ import React from 'react'
 const PortfolioText = () => {
     return (
         <div className='flex flex-col gap-3'>
-            <span className='text-start text-green-600 text-xl  p-2 border shadow-[0_2px_10px_-1px_rgba(6,81,237,0.3)] w-fit rounded-full'>Portfolio</span>
+            <span className='text-start text-green-600 text-xl  p-2 shadow-[0_2px_10px_-1px_rgba(6,81,237,0.3)] w-fit rounded-full'>Portfolio</span>
             <h1 className=' text-3xl '>My Creative Work
                 <br />
                 Latest

@@ -42,7 +42,7 @@ export default function ProjectData() {
         >
           {photos.map((p, index) => (
             <SwiperSlide key={index}>
-              <img src={p}  alt="" />
+              <img src={p}  alt="" className='opacity-30 hover:opacity-100 z-40 ' />
             </SwiperSlide>
           ))}
         </Swiper>

@@ -71,7 +71,7 @@ const Footer = () => {
             {showButton && (
                 <button
                     onClick={scrollToTop}
-                    className="fixed bottom-16 right-4 text-black p-3 rounded-full shadow-[0_2px_10px_-1px_rgba(6,81,237,0.3)]   focus:outline-none z-50"
+                    className="fixed bottom-16 right-4  p-3 rounded-full shadow-[0_2px_10px_-1px_rgba(6,81,237,0.3)]   focus:outline-none z-50"
                     aria-label="Back to top"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24">

@@ -1,19 +1,9 @@
 import React, { useState } from 'react';
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'; // Importing a lightbulb icon for theme toggle
 
 const Navbar = () => {
-
-    const downloadCV = () => {
-        const link = document.createElement('a');
-        link.href = 'Farhan_CV.pdf'; // Ensure this path is correct
-        link.download = 'My_CV.pdf'; // The file name to save as
-        console.log("clicked");
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    };
-
     const [nav, setNav] = useState(false);
+    
 
     const handleNav = () => {
         setNav(!nav);
@@ -25,6 +15,18 @@ const Navbar = () => {
             section.scrollIntoView({ behavior: 'smooth' });
         }
     };
+
+    const downloadCV = () => {
+        const link = document.createElement('a');
+        link.href = 'Farhan_CV.pdf'; // Ensure this path is correct
+        link.download = 'My_CV.pdf'; // The file name to save as
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
+   
+
     const navItems = [
         { id: 1, text: 'Home' },
         { id: 2, text: 'Projects' },
@@ -32,25 +34,28 @@ const Navbar = () => {
     ];
 
     return (
-        <div className='flex justify-between items-center h-24 max-w-full mx-auto px-4 shadow-[0_2px_10px_-1px_rgba(6,81,237,0.3)]'>
+        <div className='flex justify-between items-center h-24 max-w-full mx-auto px-4 shadow-[0_2px_10px_-1px_rgba(6,81,237,0.3)] '>
             {/* Logo */}
             <h1 className='w-full text-3xl font-bold text-[#00df9a]'>MEER AGENCY</h1>
 
             {/* Desktop Navigation */}
-            <ul className='hidden md:flex'>
+            <ul className='hidden md:flex items-center'>
                 {navItems.map((item, index) => (
                     <li
                         key={item.id}
                         className='p-3 hover:bg-[#00df9a] rounded-xl m-2 cursor-pointer duration-300 hover:text-black shadow-[2px_2px_10px_-2px_rgba(6,81,237,0.3)]'
-                        onClick={() => scrollToSection(`section${index + 1}`)} // Add this line
+                        onClick={() => scrollToSection(`section${index + 1}`)}
                     >
                         {item.text}
                     </li>
                 ))}
+                
             </ul>
 
             {/* Download Button (Desktop) */}
-            <div className='w-full md:flex md:items-end md:justify-end hidden'>
+            <div className='w-full md:flex md:items-end md:justify-end hidden gap-2'>
+                {/* Theme Toggle Button (Desktop) */}
+              
                 <button
                     type="button"
                     onClick={downloadCV}
@@ -59,6 +64,7 @@ const Navbar = () => {
                     Download CV
                 </button>
             </div>
+           
 
             {/* Mobile Navigation Icon */}
             <div onClick={handleNav} className='block md:hidden'>
@@ -82,7 +88,7 @@ const Navbar = () => {
                         onClick={() => {
                             scrollToSection(`section${index + 1}`);
                             handleNav(); // Close the menu after clicking
-                        }} // Add this line
+                        }}
                     >
                         {item.text}
                     </li>

@@ -38,7 +38,7 @@ const Contact = () => {
     return (
         <section id="contact">
             <div className='flex flex-col justify-center items-center '>
-                <h1 className='text-xl text-green-600 border shadow-[0_2px_10px_-1px_rgba(6,81,237,0.3)] rounded-full w-fit p-3'>Contact Us</h1>
+                <h1 className='text-xl text-green-600  shadow-[0_2px_10px_-1px_rgba(6,81,237,0.3)] rounded-full w-fit p-3'>Contact Us</h1>
                 <h1 className='md:text-center text-start text-2xl md:mt-8 mt-2'>Let’s Discuss Your <span className='text-green-600'>
                     Project
                 </span>
@@ -53,7 +53,7 @@ const Contact = () => {
 
                 <div class="grid lg:grid-cols-3 items-start gap-4 p-2 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-lg mt-12">
 
-                    <div class=" rounded-lg p-6 h-full max-lg:order-1 bg-gray-800 ">
+                    <div class=" rounded-lg p-6 h-full max-lg:order-1 bg-black  ">
                         <h2 class="text-xl text-green-600 ">Contact Information</h2>
                         <p class="text-sm text-gray-300 mt-4">Have some big idea or brand to develop and need help?</p>
 
@@ -100,7 +100,7 @@ const Contact = () => {
                                         type="text"
                                         placeholder="Full Name"
                                         autoComplete="false"
-                                        class="px-2 py-3  shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)]  w-full text-sm    outline-none"
+                                        class="px-2 py-3  shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)]  w-full text-sm   bg-black outline-none"
                                         {...register("name", {
                                             required: "Full name is required",
                                             maxLength: 80,
@@ -119,7 +119,7 @@ const Contact = () => {
                                         type="email"
                                         placeholder="Email Address"
                                         name="email"
-                                        class="px-2 py-3 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)]  w-full text-sm    outline-none"
+                                        class="px-2 py-3 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)]  w-full text-sm bg-black   outline-none"
                                         autoComplete="false"
                                         {...register("email", {
                                             required: "Enter your email",
@@ -143,7 +143,7 @@ const Contact = () => {
                                         type="number"
                                         placeholder="Phone Number"
                                         name="number"
-                                        class="px-2 py-3 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)]  w-full text-sm    outline-none"
+                                        class="px-2 py-3 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)]  w-full text-sm  bg-black  outline-none"
                                         {...register("number", { required: "Enter your number" })}
                                     />
                                     {errors.number && (
@@ -159,7 +159,7 @@ const Contact = () => {
                                         type="number"
                                         placeholder="Your Budget"
                                         name="budget"
-                                        class="px-2 py-3  shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)]  w-full text-sm    outline-none"
+                                        class="px-2 py-3  shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)]  w-full text-sm  bg-black  outline-none"
                                         {...register("budget", { required: "Enter your Buget" })}
 
                                     />
@@ -175,7 +175,7 @@ const Contact = () => {
                                     <textarea
                                         name="message"
                                         placeholder="Your Message"
-                                        class="px-2 py-3  shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)]  w-full text-sm    outline-none"
+                                        class="px-2 py-3  shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)]  w-full text-sm bg-black  outline-none"
                                         {...register("message", {
                                             required: "Enter your Message",
                                         })}
